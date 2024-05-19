@@ -171,41 +171,41 @@ def main():
     canny_edges = extract_canny_edges(depth_image)
     normal_map = depth_to_normal_map(depth_image)
 
-    os.makedirs(f"/mnt/sagarika/_0SD/generated_images/{fname}", exist_ok=True)
+    os.makedirs(f"./generated_images/{fname}", exist_ok=True)
 
     generated_image = generate_image_with_depth_maps(prompt, depth_image)
-    generated_image.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/depth.png")
+    generated_image.save(f"./generated_images/{fname}/depth.png")
 
     generated_image = generate_image_with_canny_edges(prompt, depth_image, canny_edges)
-    generated_image.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/canny_edges.png")
+    generated_image.save(f"./generated_images/{fname}/canny_edges.png")
 
     generated_image = generate_image_with_normals(prompt, depth_image, normal_map)
-    generated_image.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/normal_map.png")
+    generated_image.save(f"./generated_images/{fname}/normal_map.png")
 
     generated_images = generate_images_with_aspect_ratios(prompt, depth_image)
     for i, img in enumerate(generated_images):
-        img.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/generated_image_{i}.png")
+        img.save(f"./generated_images/{fname}/generated_image_{i}.png")
 
     generated_image = generate_image_combined(prompt, depth_image, canny_edges, normal_map)
-    generated_image.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/combined.png")
+    generated_image.save(f"./generated_images/{fname}/combined.png")
 
     num_inference_steps = 50
     latency, eu_latency, ddim_latency, result, result_eu, result_ddim = measure_generation_latency(prompt, depth_image, num_inference_steps)
     print(f"num_inference_steps = 50, Initial Latency: {latency}s, Euler's Latency: {eu_latency}s, DDIM Latency: {ddim_latency}s")
 
   
-    result.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/result_dpm_{num_inference_steps}.png")
-    result_eu.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/result_eu_{num_inference_steps}.png")
-    result_ddim.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/result_ddim_{num_inference_steps}.png")
+    result.save(f"./generated_images/{fname}/result_dpm_{num_inference_steps}.png")
+    result_eu.save(f"./generated_images/{fname}/result_eu_{num_inference_steps}.png")
+    result_ddim.save(f"./generated_images/{fname}/result_ddim_{num_inference_steps}.png")
 
 
     num_inference_steps = 25
     latency, eu_latency, ddim_latency, result, result_eu, result_ddim = measure_generation_latency(prompt, depth_image, num_inference_steps)
     print(f"num_inference_steps = 25, Initial Latency: {latency}s, Euler's Latency: {eu_latency}s, DDIM Latency: {ddim_latency}s")
 
-    result.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/result_dpm_{num_inference_steps}.png")
-    result_eu.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/result_eu_{num_inference_steps}.png")
-    result_ddim.save(f"/mnt/sagarika/_0SD/generated_images/{fname}/result_ddim_{num_inference_steps}.png")
+    result.save(f"./generated_images/{fname}/result_dpm_{num_inference_steps}.png")
+    result_eu.save(f"./generated_images/{fname}/result_eu_{num_inference_steps}.png")
+    result_ddim.save(f"./generated_images/{fname}/result_ddim_{num_inference_steps}.png")
 
 
 if __name__ == "__main__":
