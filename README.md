@@ -25,10 +25,16 @@ First, clone the repository:
 git clone https://github.com/sagarikajadon13/image_gen_using_SD.git
 cd image_gen_using_SD
 ```
-Then install the required packages
+
+## Usage
+
+Install the required packages
 
 To run the script with a specific depth image path and prompt, use:
 
 ```sh
 python generation.py --image_path /path/to/depth_image --prompt your_prompt
 ```
+
+## Output
+The generated images will be saved in the generated_images directory with subdirectories named after the depth image file. 
