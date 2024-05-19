@@ -1,6 +1,6 @@
-# Stable Diffusion with ControlNet
+# Image Generation Using Stable Diffusion and Controlnet
 
-This repository contains a script to generate images using Stable Diffusion and ControlNet models. The script processes a depth maps to generate different variations of images.
+This repository contains a script to generate images using Stable Diffusion and ControlNet models. The script processes a depth map to generate different variations of images.
 
 ## Requirements
 
