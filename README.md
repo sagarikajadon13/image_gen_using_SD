@@ -37,4 +37,4 @@ python generation.py --image_path /path/to/depth_image --prompt your_prompt
 ```
 
 ## Output
-The generated images will be saved in the generated_images directory with subdirectories named after the depth image file. 
+The generated images will be saved in the `generated_images` directory with subdirectories named after the depth image file. 
