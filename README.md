@@ -22,10 +22,10 @@ This repository contains a script to generate images using Stable Diffusion and 
 First, clone the repository:
 
 ```sh
-git clone https://github.com/yourusername/stable-diffusion-controlnet.git
-cd stable-diffusion-controlnet
+git clone https://github.com/sagarikajadon13/image_gen_using_SD.git
+cd image_gen_using_SD
 ```
-
+Then install the required packages
 
 To run the script with a specific depth image path and prompt, use:
 
