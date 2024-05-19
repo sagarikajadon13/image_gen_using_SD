@@ -30,5 +30,5 @@ Then install the required packages
 To run the script with a specific depth image path and prompt, use:
 
 ```sh
-python generate_images.py --image_path /path/to/depth_image --prompt your_prompt
+python generation.py --image_path /path/to/depth_image --prompt your_prompt
 ```
